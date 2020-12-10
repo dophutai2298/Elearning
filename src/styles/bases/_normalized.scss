@@ -1,0 +1,39 @@
+.owl-nav{
+    .owl-prev,.owl-next{
+        position: absolute;
+        top: 20%;
+        left: -3%;
+        width: 45px;
+        height: 45px;
+        border-radius:50% !important;
+        -webkit-border-radius:50% !important;
+        -moz-border-radius:50% !important;
+        -ms-border-radius:50% !important;
+        -o-border-radius:50% !important;
+        background-color: bg("white2") !important;
+        box-shadow: 0 2px 8px 2px textcolor("gray");
+        z-index: 100;
+        @include MediaQuery($sm){
+            width: 30px;
+            height: 30px;
+            top: 5%;
+            left: -5%;
+        }
+        span{
+            @include Text($h4, $fwRegular, bg("secondary"));
+            line-height: 0.6;
+        }
+        &:focus{
+            outline: none;
+        }
+    }
+    .owl-next{
+        left: unset;
+        right: -3%;
+        @include MediaQuery($sm){
+            right: -5%;
+        }
+    }
+}
+
+

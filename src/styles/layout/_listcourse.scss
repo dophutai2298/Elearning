@@ -1,0 +1,50 @@
+.list{
+    margin: spacing(3,0);
+    &__search{
+        width: 30%;
+        .input-group-prepend{
+            background: bg("primary");
+            border: 1px solid bg("secondary");
+            cursor: pointer;
+            .fa-search{
+                @include  Text($h6,$fwMedium,textcolor("secondary"));
+            }
+            &:hover{
+                opacity: 0.8;
+            }
+        }
+    }
+    &__course{
+        margin-top: spacing(3);
+        .card{
+            border: 2px solid bg("secondary");
+            .card-title{
+                @include  Text($h4,$fwMedium,textcolor("secondary"));
+                text-align: center;
+            }
+            .card__value{
+                display: flex;
+                justify-content: space-between;
+                .card__value--star{
+                    i{
+                        @include  Text($subtitle2,$fwMedium,textcolor("yellow"));
+                    }
+                }
+                .card__value--price{
+                    p{
+                        @include  Text($h5,$fwMedium,textcolor("red"));
+                    }
+                }
+            }
+            .card__button{
+                .btnView{
+                   @include Button(bg("secondary"),1px solid bg("secondary"),100%,40px,5px);
+                   color: textcolor("white");
+                    &:hover{
+                        opacity: 0.8;
+                    }
+                }
+            }
+        }
+    }
+}

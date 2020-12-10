@@ -1,0 +1,32 @@
+.dashboard {
+    background: bg("blue3");
+    min-height: 800px;
+    &__detail {
+      padding: spacing(3, 4);
+      text-align: left;
+      &--logo {
+        img {
+          width: 60%;
+          margin-left: 20%;
+        }
+      }
+      &--menu {
+        margin-top: spacing(10);
+        ul {
+          li {
+            list-style: none;
+            margin: spacing(5, 0);
+            span {
+              cursor: pointer;
+              @include Text($h5, $fwMedium, textcolor("white"));
+              transition: all 0.3s;
+              &:hover {
+                font-size: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  

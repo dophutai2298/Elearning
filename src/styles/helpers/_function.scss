@@ -1,0 +1,20 @@
+@function bg($color){
+    @if(map-has-key($map: $background, $key:$color )){
+        @return map-get($map: $background, $key:$color);
+    }
+    @warn("Sai key roi !");
+}
+
+@function textcolor($color){
+    @if(map-has-key($map: $textColor, $key:$color )){
+        @return map-get($map: $textColor, $key:$color);
+    }
+    @warn("Sai key roi !");
+}
+
+@function spacing($x,$y:null){
+    @if($y==null){
+        @return $x*$spacing;
+    }
+    @return $x * $spacing $y*$spacing;
+}

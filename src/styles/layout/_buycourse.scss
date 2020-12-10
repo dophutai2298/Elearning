@@ -1,0 +1,138 @@
+.banner {
+    background: bg("black1");
+    height: 300px;
+    margin-top: spacing(8);
+    position: relative;
+    &__content {
+      width: 80%;
+      margin-left: 10%;
+      padding-top: spacing(5);
+      &--title {
+        h3 {
+          @include Text($h4, $fwMedium, textcolor("white"));
+          text-shadow: 0 0 20px textcolor("white");
+        }
+      }
+      &--detail {
+        p {
+          width: 60%;
+          @include Text($h6, $fwMedium, textcolor("white"));
+        }
+        span {
+          @include Text($subtitle1, $fwMedium, textcolor("yellow2"));
+        }
+      }
+      &--rating {
+        .rating_star {
+          i {
+            @include Text($subtitle1, $fwMedium, textcolor("yellow"));
+          }
+        }
+      }
+    }
+    .buyCourse {
+      position: absolute;
+      top: 20%;
+      right: 10%;
+      min-height: 500px;
+      width: 20%;
+      z-index: 3;
+      background: bg("primary");
+      box-shadow: 0 0 5px bg("black");
+      .buyCourse__detial {
+        border: 1px solid bg("light");
+        .buyCourse__detail--img {
+          img {
+            width: 100%;
+            height: 200px;
+            border-radius: 3px;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            -ms-border-radius: 3px;
+            -o-border-radius: 3px;
+          }
+        }
+        .buyCourse__price{
+            p{
+                text-align: center;
+              @include Text($h3, $fwMedium, textcolor("yellow"));
+            }
+        }
+        .buyCourse__detail--button {
+  
+          span {
+            @include Text($subtitle1, $fwMedium, textcolor("primary"));
+            text-align: center;
+            display: block;
+          }
+          .btn__detail {
+            @include Button(
+              bg("primary"),
+              1px solid bg("secondary"),
+              90%,
+              50px,
+              5px
+            );
+            display: block;
+            margin: spacing(0.7, 0);
+            margin-left: 5%;
+          }
+          .btn--cart {
+            background: bg("secondary");
+            border: 1px solid bg("secondary");
+            color: textcolor("white");
+            transition: all 0.3s;
+            &:hover {
+              background: bg("primary");
+              border: 1px solid bg("secondary");
+              color: textcolor("secondary");
+            }
+          }
+          .btn--buynow {
+            background: bg("primary");
+            border: 1px solid bg("secondary");
+            color: textcolor("secondary");
+            transition: all 0.3s;
+            &:hover {
+              background: bg("secondary");
+              border: 1px solid bg("secondary");
+              color: textcolor("white");
+            }
+          }
+        }
+        .buyCourse__detail--info {
+          margin-top: spacing(2);
+          p {
+            @include Text($h6, $fwRegular, textcolor("primary"));
+            margin-left: spacing(0.7);
+          }
+        }
+      }
+    }
+  }
+  
+  .describle{
+      min-height: 350px;
+      width: 75%;
+      margin-top: spacing(2);
+      &__detail{
+          border: 1px solid bg("gray2");
+          border-radius: 3px;
+          -webkit-border-radius: 3px;
+          -moz-border-radius: 3px;
+          -ms-border-radius: 3px;
+          -o-border-radius: 3px;
+          .describle__content{
+           
+              margin-left: spacing(2);
+              h3{
+                  @include Text($h4, $fwMedium, textcolor("primary"));
+                 
+              }
+            
+          }
+       
+      }
+  }
+  
+  

@@ -1,0 +1,54 @@
+
+.banner__section{
+    margin-top: spacing(5);
+    .banner__middle{
+  background: url(../images/purple-intersect.svg) repeat-x bg("pink") ;
+        height: 240px;
+        background-size: auto 120%;
+        background-position: 0 -2.4rem;
+        color:textcolor("white");
+        padding: spacing(5,0);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include MediaQuery($sm){
+            padding:spacing(2,0);
+        }
+        @include MediaQuery($xs){
+            padding:spacing(1.5,0);
+        }
+        .banner__middle--content{
+
+            .banner__content--detail{
+                width: 80%;
+                margin-left: 10%;
+                @include MediaQuery($xs){
+                    width: 100%;
+                    margin-left: 0;
+                }
+                h3{
+                  @include  Text($h3,$fwBold,textcolor("white"));
+                  @include MediaQuery($xs){
+                   font-size: $h4;
+                  
+                }
+                }
+                p{
+                    @include  Text($h5,$fwMedium,textcolor("white"));
+                    @include MediaQuery($xs){
+                        font-size: $h6;
+                     }
+                }
+                .banner--btn{
+                    @include  Button(transparent, 1px solid textcolor("white"),120px,40px,5px);
+                    a{
+                        color:textcolor("white");
+                    }
+                   
+                }
+            }
+        }
+    }
+}
+

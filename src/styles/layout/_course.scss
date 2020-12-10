@@ -1,0 +1,104 @@
+.courses__section {
+    margin-top: spacing(5);
+    .courses__title {
+      h3{
+        @include Text($h4, $fwBold, textcolor("primary"));
+      }
+      p {
+        @include Text($h6, $fwRegular, textcolor("gray"));
+      }
+    }
+  
+    .courses__list {
+      .nav {
+        border: none;
+        border-bottom: 1px solid textcolor("gray");
+        @include MediaQuery($xs){
+          display: block !important;
+        }
+      
+        .nav-item {
+          .nav-link {
+            color: textcolor("gray");
+            font-weight: $fwBold;
+            padding-bottom: spacing(2);
+            @include MediaQuery($sm){
+              font-size: $subtitle1;
+              padding:spacing(0,1);
+              padding-bottom: spacing(0.8);
+             
+            }
+          }
+          .nav-link.active {
+            border: none;
+            border-bottom: 2px solid textcolor("primary");
+            @include MediaQuery($xs){
+              border-bottom: 1px solid textcolor("primary");
+            }
+          }
+        }
+      }
+      .tab-content {
+        padding-top: spacing(2);
+        position: relative;
+        .card{
+            border: none;
+            .card-body{
+              padding: spacing(0.5);
+              .card-title{
+                @include Text($h6, $fwBold, textcolor("primary"));
+                @include MediaQuery($sm){
+                  font-size: $subtitle1;
+                }
+              }
+              .card-text{
+                margin: 0;
+                @include Text($subtitle2, $fwMedium, textcolor("primary"));
+              }
+            }
+           
+            .rating {
+              display: flex;
+              .rating_star {
+                @include Text($subtitle2, $fwLight, textcolor("yellow"));
+                margin: 0;
+                @include MediaQuery($sm){
+                  font-size: $body1;
+                }
+              }
+              span:nth-child(2){
+                  @include Text($subtitle2, $fwBold, textcolor("yellow"));
+                  margin: 0;
+              }
+              span:last-child{
+                  @include Text($subtitle2, $fwLight, textcolor("primary"));
+                  margin: 0;
+              }
+            }
+            .price{
+                text-align: left;
+                .new-price{
+                  @include Text($h6, $fwBold, textcolor("primary"));
+                }
+                .old-price{
+                    @include Text($subtitle2,$fwLight,textcolor("gray"));
+                    text-decoration: line-through;
+                }
+                .btn_sell{
+                    display: block;
+                    background-color: bg("yellow");
+                    border: none;
+                    @include Text($subtitle1,$fwBold,textcolor("red"));
+                    padding: spacing(0.2,0.4);
+                    @include MediaQuery($sm){
+                      font-size: $subtitle2;
+                      padding: spacing(0.2,0.3);
+                    }
+                }
+            }
+        }
+     
+      }
+    }
+  }
+  

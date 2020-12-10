@@ -1,0 +1,30 @@
+.client__section{
+    margin: spacing(5,0);
+    .client__section--content{
+        border-top:1px solid textcolor("gray2");
+        border-bottom: 1px solid textcolor("gray2");
+        height: 170px;
+        padding: spacing(2,0);
+        @include MediaQuery($xs){
+            height: 220px;
+            padding: spacing(0.8,0);
+        }
+        .client__content--detail{
+           padding: spacing(3,0);
+            text-align: center;
+            h3{
+                @include Text($h4,$fwBold,textcolor("primary"));
+                margin-bottom: spacing(2);
+            }
+            a{
+                text-decoration: none;
+                img{
+                    margin-right: spacing(1.5);
+                    @include MediaQuery($xs){
+                      margin: spacing(1);
+                    }
+                }
+            }
+        }
+    }
+}

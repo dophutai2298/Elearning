@@ -1,0 +1,18 @@
+.menu__nav{
+    margin-top: spacing(8);
+    height: 50px;
+    background: bg("secondary");
+    ul{
+        display: flex;
+        justify-content: space-between;
+        li{
+            list-style: none;
+            line-height: 50px;
+            span{
+                @include  Text($subtitle1,$fwMedium,textcolor("white"));
+                text-transform: uppercase;
+            }
+            
+        }
+    }
+}

@@ -1,0 +1,24 @@
+.menu__nav {
+  margin-top: spacing(8);
+  height: 50px;
+  background: bg("secondary");
+  ul {
+    display: flex;
+    justify-content: space-between;
+    li {
+      list-style: none;
+      line-height: 50px;
+      .btn {
+        @include Text($subtitle1, $fwMedium, textcolor("white"));
+        text-transform: uppercase;
+        &:hover {
+          transform: scale(1.1);
+          -webkit-transform: scale(1.1);
+          -moz-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+          -o-transform: scale(1.1);
+        }
+      }
+    }
+  }
+}

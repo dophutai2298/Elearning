@@ -1,0 +1,113 @@
+.teacher__section {
+    padding: spacing(4, 0);
+    .teacher--content2 {
+      background: bg("blue");
+      .information--title2 {
+        h3 {
+          color: textcolor("white") !important;
+        }
+      }
+      .information--content2 {
+        p {
+          color: textcolor("white") !important;
+        }
+      }
+    }
+    &--content {
+      background: bg("white2");
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      height: 300px;
+      @include MediaQuery($sm) {
+        height: 250px;
+      }
+      .teacher__content-detail {
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        @include MediaQuery($lg){
+          width: 90%;
+        }
+        @include MediaQuery($xs){
+          // width: 90%;
+          display: block;
+        }
+  
+        .teacher__content--img {
+          img {
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08),
+              0 4px 12px rgba(0, 0, 0, 0.08);
+              @include MediaQuery($md){
+                width: 370px;
+              }
+            }
+            
+          @include MediaQuery($sm) {
+            display: none;
+          }
+        }
+        .teacher__content--information{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          margin-left: spacing(4);
+          width: 90%;
+          @include MediaQuery($sm){
+            width: 100%;
+          }
+          @include MediaQuery($xs){
+            margin-left: 0;
+          }
+          .teacher__information--title {
+            h3 {
+              @include Text($h3, $fwBold, textcolor("primary"));
+              @include MediaQuery($sm) {
+                text-align: center;
+              }
+            }
+          }
+          .teacher__information--content {
+            p {
+              @include Text($h5, $fwRegular, textcolor("primary"));
+              width: 80%;
+              @include MediaQuery($lg) {
+                width: 90%;
+               
+              }
+              @include MediaQuery($sm) {
+                text-align: center;
+                width: 100%;
+                // font-size: $h6;
+               
+              }
+            }
+          }
+          .teacher__btn {
+            @include Button(bg("secondary"), none, 45%, 45px, 5px);
+            @include MediaQuery($md){
+              width: 70%;
+            }
+            a {
+              text-decoration: none;
+              @include Text($h6, $fwBold, textcolor("white"));
+            }
+            &:hover {
+              background: bg("purple2");
+            }
+            @include MediaQuery($sm) {
+              text-align: center;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .teacher__2 {
+    @include MediaQuery($sm) {
+      display: none;
+    }
+  }
+  

@@ -1,0 +1,109 @@
+.row{
+    margin:spacing(0,0.05);
+}
+.manager{
+    &__login{
+        margin-top: spacing(2);;
+        text-align: right;
+        p{
+           margin-right: spacing(2);
+            @include Text($h6, $fwMedium, textcolor("red"));
+        }
+    }
+    &__title{
+        display: flex;
+        justify-content: space-between;
+        &--name{
+            h3{
+                @include Text($h3, $fwMedium, textcolor("primary"));
+            }
+        }
+        &--add{
+            button{
+                @include  Button(bg("blue3"),1px solid bg("blue3"),200px,40px,3px);
+                color: textcolor("white");
+                i{
+                    margin-right: spacing(0.7);
+                }
+                &:hover{
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+    &__search{
+        margin-top: spacing(2);
+        .input-group-prepend{
+            cursor: pointer;
+            .fa-search{
+                @include Text($h6, $fwMedium, textcolor("secondary"));
+            }
+        }
+    }
+    &__list{
+        &--course{
+            position: relative;
+            .card{
+                border: 2px solid bg("secondary");
+                .card-title{
+                    @include Text($h4, $fwMedium, textcolor("primary"));
+                    margin: spacing(0.2);
+                }
+                .card--day{
+                    @include Text($h6, $fwMedium, textcolor("primary"));
+                }
+                .card-body{
+                    .card-text{
+                        text-align: right;
+                    }
+                }
+                .card__detail{
+                    display: none;
+                   width: 0%;
+                   height: 100%;
+                   position: absolute;
+                   top: 0;
+                   left: 0;
+                   background: rgba(bg("black1"),0.9);
+                   transition: all .4s;
+                   .card__list--btn{
+                        display: block;
+                        margin-top: spacing(3);
+                        .btn{
+                            width: 90%;
+                            margin:spacing(1,0);
+                            margin-left: 5%;
+                          
+                        }
+                    }
+                }
+            }
+            &:hover{
+                .card__detail{
+                    display: block;
+                    width: 100%;
+                }
+            }
+        }
+        &--user{
+            width: 100% !important;
+            .table{
+                .btn__system{
+                    .btn{
+                        display: block;
+                        width: 150px;
+                        margin:3px auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#managerList{
+    display: none;
+}
+
+#managerUser{
+    display: none;
+}
